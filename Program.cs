@@ -12,7 +12,9 @@ namespace Assignment7
         {
             employe emp = new employe(1, "Vidyanand", 100000, 200);
             emp.salary();
-            Console.WriteLine(emp.Display());
+            string result = emp.Display();
+            Console.WriteLine(result);
+
         }
     }
 }

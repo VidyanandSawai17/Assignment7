@@ -16,7 +16,7 @@ namespace Assignment7
         public double sal, hra, da, pf, pt,total, gross;
 
 
-        public employe () //constructor
+        public employe () // default constructor
         {
             id = 0;
             name = "";
@@ -25,7 +25,15 @@ namespace Assignment7
             
         }
 
-        public  employe(int id, string name, double sal, double pt)  
+
+        // parameterized constructor would
+
+        // initialized data members with
+
+        // the values of passed arguments
+
+        // while object of that class created.
+        public employe(int id, string name, double sal, double pt)  
         {
             this.id = id;           // this keyword points to the data member
             this.name = name;
