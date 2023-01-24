@@ -13,7 +13,8 @@ namespace Assignment7
     {
         public int id;
         public string name;
-        public double sal, hra, da, pf, pt,total, gross;
+        public double sal, hra, da, ta, gross, pf,pt;
+        private static int count;
 
 
         public employe () // default constructor
@@ -33,28 +34,31 @@ namespace Assignment7
         // the values of passed arguments
 
         // while object of that class created.
-        public employe(int id, string name, double sal, double pt)  
+        public employe(string name, double sal)
         {
-            this.id = id;           // this keyword points to the data member
+            // this keyword points to the data member
+            count++;
+            id = count;
             this.name = name;
             this.sal = sal;
-            this.pt = pt;
-            
+
         }
 
         public void salary()
         {
             hra = sal * 0.40;
             da = sal * 0.20;
+            ta = sal * 0.10;
             pf = sal * 0.12;
-            total = hra + da + pf + pt ;
-            gross = sal - total;
+            gross = (sal + hra + da + ta) - pf;
+
 
         }
 
-        public string Display()
+        public string Result()
         {
-            return $"\n Emp id : {id} \n Emp Name : {name} \n Emp Salary : {sal} \n Emp Gross salary : {gross} ";
+            return $"\n Id ={id} \n Name ={name} \n Basic Salary ={sal} \n Gross of Employee ={gross}";
+
         }
 
     }

@@ -10,10 +10,12 @@ namespace Assignment7
     {
         static void Main(string[] args)
         {
-            employe emp = new employe(1, "Vidyanand", 100000, 200);
+            employe emp = new employe("Vidyanand", 100000);
+            employe emp2 = new employe("Vivekanand", 1500000);
             emp.salary();
-            string result = emp.Display();
-            Console.WriteLine(result);
+            Console.WriteLine(emp.Result());
+            Console.WriteLine(emp2.Result());
+
 
         }
     }
